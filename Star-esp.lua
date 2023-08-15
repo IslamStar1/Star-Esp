@@ -161,7 +161,7 @@ UserInputService.InputBegan:Connect(function(Input)
         
         if _G.SendNotifications == true then
             game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "Star";
+                Title = "Star Esp";
                 Text = "The ESP's visibility is now set to "..tostring(_G.ESPVisible)..".";
                 Duration = 5;
             })
@@ -176,21 +176,20 @@ end)
 if Success and not Errored then
     if _G.SendNotifications == true then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-            Title = "Star";
-            Text = "Star Esp has successfully loaded.";
+            Title = "Star Esp";
+            Text = "ESP script has successfully loaded.";
             Duration = 5;
         })
     end
 elseif Errored and not Success then
     if _G.SendNotifications == true then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-            Title = "Star";
+            Title = "Star Eso";
             Text = "ESP script has errored while loading, please check the developer console! (F9)";
             Duration = 5;
         })
     end
-    TestService:Message("The ESP script has errored, please notify Exunys with the following information :")
+    TestService:Message("The ESP script has errored, please notify IslamStar with the following information :")
     warn(Errored)
     print("!! IF THE ERROR IS A FALSE POSITIVE (says that a player cannot be found) THEN DO NOT BOTHER !!")
 end
-
